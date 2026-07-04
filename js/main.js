@@ -6,6 +6,7 @@ import { buildSections, initLightbox } from './modules/builder.js';
 import { initCarousel } from './modules/carousel.js';
 import { initAnimations, initRipple } from './modules/animations.js';
 import { initTreatments } from './modules/treatments.js';
+import {buildAnatomy} from './modules/anatomy.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   buildSections();
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initAnimations();
   initRipple();
+  buildAnatomy();
 
   // Ano no rodapé
   const yr = document.getElementById('footer-year');

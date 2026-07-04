@@ -1,4 +1,3 @@
-
 /**
  * ============================================================
  * ARQUIVO DE CONTEÚDO — Dra. Rebeca Aragão
@@ -116,32 +115,46 @@ const CONTENT = {
   ],
 
   /* ----------------------------------------------------------
-   * ESPECIALIDADES — áreas principais
+   * ESPECIALIDADES — hotspots anatômicos
+   * position: { x, y } em % relativo à imagem (0–100)
+   * side: lado preferencial do card no desktop ("left" | "right")
    * ---------------------------------------------------------- */
   especialidadesPrincipais: [
     {
+      id: "dtm",
       icon: "dtm",
       nome: "DTM",
       nomeCompleto: "Disfunções Temporomandibulares",
-      desc: "Avaliação e tratamento das disfunções da articulação temporomandibular, aliviando dores, limitações de abertura bucal e estalos.",
+      desc: "Avaliação e tratamento das disfunções da articulação temporomandibular, aliviando dores, estalos e limitação de abertura bucal.",
+      position: { x: 27, y: 47 },
+      side: "left",
     },
     {
+      id: "dor-orofacial",
       icon: "dor",
       nome: "Dor Orofacial",
       nomeCompleto: "Dor Orofacial",
-      desc: "Tratamento das dores crônicas e agudas na região da face, boca e estruturas adjacentes, com abordagem multidisciplinar.",
+      desc: "Tratamento das dores crônicas e agudas na face e estruturas adjacentes, com abordagem baseada em evidências.",
+      position: { x: 50, y: 62 },
+      side: "right",
     },
     {
+      id: "zumbido",
       icon: "zumbido",
       nome: "Zumbido",
       nomeCompleto: "Zumbido",
-      desc: "Abordagem fisioterapêutica do zumbido associado a disfunções da ATM e musculatura cervical.",
+      desc: "Abordagem fisioterapêutica do zumbido associado a disfunções da ATM e da musculatura cervical.",
+      position: { x: 76, y: 42 },
+      side: "right",
     },
     {
+      id: "paralisia-facial",
       icon: "paralisia",
       nome: "Paralisia Facial",
       nomeCompleto: "Paralisia Facial",
-      desc: "Reabilitação neuromuscular para recuperação de simetria e função facial, com atendimento presencial e online.",
+      desc: "Reabilitação neuromuscular para recuperação de simetria e função facial. Atendimento presencial e online.",
+      position: { x: 50, y: 33 },
+      side: "left",
       destaque: "Presencial & Online",
     },
   ],
