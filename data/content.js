@@ -1,123 +1,33 @@
-
 /**
  * ============================================================
  * ARQUIVO DE CONTEÚDO — Dra. Rebeca Aragão
  * ============================================================
- * Edite este arquivo para atualizar textos, links e dados.
+ * ATENÇÃO: Devido à estrutura do site, este arquivo altera 
+ * APENAS as seções de: Contato, Tratamentos, Especialidades 
+ * e Depoimentos. 
+ * * Textos da capa (Hero), seção "Quem Sou" e "Cartão de Visita" 
+ * devem ser alterados DIRETAMENTE nos arquivos .html
  * ============================================================
  */
 
 const CONTENT = {
 
-  geral: {
-    nome:          "Dra. Rebeca Aragão",
-    crefito:       "CREFITO 318120-F",
-    especialidade: "Fisioterapia Bucomaxilofacial",
-    slogan:        "Cuidando da sua saúde com ciência, dedicação e acolhimento.",
-  },
+  /* ==========================================================
+     🟢 SEÇÕES DINÂMICAS (Alterar aqui muda no site)
+     ========================================================== */
 
   contato: {
-    whatsapp:    "http://wa.me/5577988199001",
+    whatsapp: "http://wa.me/5577988199001",
     whatsappNum: "(77) 98819-9001",
-    telefone:    "(77) 98819-9001",
-    instagram:   "https://instagram.com/fisio_rebecaaragao",
-    google:      "https://share.google/x750evJ98upDAzn2G",
-    email:       "seuemail@email.com",   // ← substitua
-    endereco:    "Vitória da Conquista – BA",
-    googleMaps:  "#",                    // ← substitua pelo link do Google Maps
-    siteUrl:     "https://www.seusite.com.br", // ← substitua pela URL real
+    telefone: "(77) 98819-9001",
+    instagram: "https://instagram.com/fisio_rebecaaragao",
+    google: "https://share.google/C9dFz98t0YAGcX2uR",
+    email: "seuemail@email.com",   // ← substitua
+    endereco: "Vitória da Conquista – BA",
+    googleMaps: "#",                    // ← substitua pelo link do Google Maps
+    siteUrl: "https://www.seusite.com.br",
   },
 
-  hero: {
-    fraseInspiradora: "Cuidar do movimento é devolver qualidade de vida, conforto e confiança para sorrir, falar e viver.",
-    descricao: "Especialista no tratamento das disfunções de cabeça, face e pescoço, promovendo alívio da dor, recuperação funcional e melhora da qualidade de vida.",
-    foto: "assets/images/foto-hero.jpg",   // ← 960×1280px recomendado
-    fotoAlt: "Dra. Rebeca Aragão — Fisioterapeuta Bucomaxilofacial",
-  },
-
-  quemSou: {
-    foto: "assets/images/foto-sobre.jpg", // ← 800×1000px recomendado
-    fotoAlt: "Dra. Rebeca Aragão",
-    texto: `Sou fisioterapeuta especializada em Fisioterapia Bucomaxilofacial, uma área que une
-      conhecimento aprofundado da anatomia da cabeça, face e pescoço ao cuidado humanizado
-      com o paciente. Minha trajetória foi construída com dedicação à formação continuada,
-      ao atendimento de excelência e à busca constante por evidências científicas que
-      fundamentem cada tratamento.
-      <br><br>
-      Acredito que cada paciente é único e merece uma avaliação individualizada, um plano
-      terapêutico personalizado e, acima de tudo, acolhimento. Meu compromisso é devolver
-      a você o conforto, a função e a qualidade de vida que merece.`,
-    diferenciais: [
-      "Atendimento humanizado",
-      "Avaliação individualizada",
-      "Tratamento baseado em evidências científicas",
-      "Atendimento presencial e online",
-    ],
-  },
-
-  /* ----------------------------------------------------------
-   * TRATAMENTOS REALIZADOS
-   * Cada item tem foto de capa e galeria de fotos.
-   * Adicione quantos casos quiser seguindo o mesmo padrão.
-   * ---------------------------------------------------------- */
-  tratamentos: [
-    {
-      id: "dtm-caso-1",
-      nome: "Tratamento de DTM",
-      desc: "Reabilitação funcional com resolução de dor e limitação de abertura bucal.",
-      capa: "assets/images/tratamentos/dtm-capa.jpg",     // ← substitua
-      galeria: [
-        "assets/images/tratamentos/dtm-1.jpg",
-        "assets/images/tratamentos/dtm-2.jpg",
-        "assets/images/tratamentos/dtm-3.jpg",
-      ],
-    },
-    {
-      id: "paralisia-caso-1",
-      nome: "Paralisia Facial",
-      desc: "Recuperação progressiva da simetria e motricidade facial com protocolo especializado.",
-      capa: "assets/images/tratamentos/paralisia-capa.jpg",
-      galeria: [
-        "assets/images/tratamentos/paralisia-1.jpg",
-        "assets/images/tratamentos/paralisia-2.jpg",
-        "assets/images/tratamentos/paralisia-3.jpg",
-      ],
-    },
-    {
-      id: "ortognatica-caso-1",
-      nome: "Pós-op Ortognática",
-      desc: "Reabilitação completa após cirurgia ortognática, devolvendo função e conforto.",
-      capa: "assets/images/tratamentos/ortognatica-capa.jpg",
-      galeria: [
-        "assets/images/tratamentos/ortognatica-1.jpg",
-        "assets/images/tratamentos/ortognatica-2.jpg",
-      ],
-    },
-    {
-      id: "trauma-caso-1",
-      nome: "Trauma de Face",
-      desc: "Recuperação funcional após trauma facial, restaurando mobilidade e qualidade de vida.",
-      capa: "assets/images/tratamentos/trauma-capa.jpg",
-      galeria: [
-        "assets/images/tratamentos/trauma-1.jpg",
-        "assets/images/tratamentos/trauma-2.jpg",
-      ],
-    },
-    {
-      id: "dor-orofacial-caso-1",
-      nome: "Dor Orofacial Crônica",
-      desc: "Controle e eliminação de dores crônicas na região orofacial com abordagem multidisciplinar.",
-      capa: "assets/images/tratamentos/dor-capa.jpg",
-      galeria: [
-        "assets/images/tratamentos/dor-1.jpg",
-        "assets/images/tratamentos/dor-2.jpg",
-      ],
-    },
-  ],
-
-  /* ----------------------------------------------------------
-   * ESPECIALIDADES — áreas principais
-   * ---------------------------------------------------------- */
   especialidadesPrincipais: [
     {
       icon: "dtm",
@@ -146,9 +56,6 @@ const CONTENT = {
     },
   ],
 
-  /* ----------------------------------------------------------
-   * PÓS-OPERATÓRIO — procedimentos
-   * ---------------------------------------------------------- */
   posOperatorio: [
     {
       num: "01",
@@ -180,44 +87,112 @@ const CONTENT = {
     },
   ],
 
-  /* ----------------------------------------------------------
-   * DEPOIMENTOS
-   * ---------------------------------------------------------- */
+  tratamentos: [
+    {
+      id: "dtm-caso-1",
+      nome: "Tratamento de DTM",
+      desc: "Reabilitação funcional com resolução de dor e limitação de abertura bucal.",
+      capa: "assets/images/tratamentos/01.jpg",     // ← substitua
+      galeria: [
+        "assets/images/tratamentos/01.jpg",
+        "assets/images/tratamentos/02.jpg",
+        "assets/images/tratamentos/04.jpg",
+      ],
+    },
+    {
+      id: "paralisia-caso-1",
+      nome: "Paralisia Facial",
+      desc: "Recuperação progressiva da simetria e motricidade facial com protocolo especializado.",
+      capa: "assets/images/tratamentos/02.jpg",
+      galeria: [
+        "assets/images/tratamentos/01.jpg",
+        "assets/images/tratamentos/02.jpg",
+        "assets/images/tratamentos/04.jpg",
+      ],
+    },
+    {
+      id: "ortognatica-caso-1",
+      nome: "Pós-op Ortognática",
+      desc: "Reabilitação completa após cirurgia ortognática, devolvendo função e conforto.",
+      capa: "assets/images/tratamentos/03.jpg",
+      galeria: [
+        "assets/images/tratamentos/01.jpg",
+        "assets/images/tratamentos/02.jpg",
+        "assets/images/tratamentos/04.jpg",
+      ],
+    },
+    {
+      id: "trauma-caso-1",
+      nome: "Trauma de Face",
+      desc: "Recuperação funcional após trauma facial, restaurando mobilidade e qualidade de vida.",
+      capa: "assets/images/tratamentos/04.jpg",
+      galeria: [
+        "assets/images/tratamentos/01.jpg",
+        "assets/images/tratamentos/02.jpg",
+        "assets/images/tratamentos/04.jpg",
+      ],
+    },
+    {
+      id: "dor-orofacial-caso-1",
+      nome: "Dor Orofacial Crônica",
+      desc: "Controle e eliminação de dores crônicas na região orofacial com abordagem multidisciplinar.",
+      capa: "assets/images/tratamentos/03.jpg",
+      galeria: [
+        "assets/images/tratamentos/01.jpg",
+        "assets/images/tratamentos/02.jpg",
+        "assets/images/tratamentos/04.jpg",
+      ],
+    },
+  ],
+
   depoimentos: [
     {
-      nome: "Maria Clara S.",
-      texto: "A Dra. Rebeca foi fundamental na minha recuperação pós-cirurgia. Atendimento impecável, cuidadoso e muito profissional. Voltei a sorrir sem dor!",
+      nome: "Luca d'El-Rei",
+      texto: "Excelente! Profissional com atendimento muito bom, ético e super especializada na área. Com poucas consultas, foi possível perceber grandes mudanças no tratamento. Boa disponibilidade de horários e atenção pós-alta.",
       estrelas: 5,
     },
     {
-      nome: "João Paulo M.",
-      texto: "Sofria de dores na mandíbula há anos. Após o tratamento, minha qualidade de vida mudou completamente. Recomendo de olhos fechados.",
+      nome: "Kelly Moreno",
+      texto: "Excelente profissional, atenciosa, carinhosa. Sem falar no atendimento e cuidado. Indico de olhos fechados.",
       estrelas: 5,
     },
     {
-      nome: "Ana Beatriz L.",
-      texto: "Atendimento humanizado, ambiente acolhedor e profissional extremamente competente. A melhor decisão que tomei foi iniciar o tratamento aqui.",
+      nome: "Caroline Lopes",
+      texto: "Atendimento excelente! A fisioterapia facial superou minhas expectativas, desde a recepção até o cuidado no tratamento. Profissional atenciosa, dedicada e com muita paciência, sempre explicando cada passo do processo. Já senti muita diferença na minha recuperação e me sinto cada vez melhor. Recomendo de olhos fechados para quem busca qualidade, acolhimento e resultados de verdade!",
       estrelas: 5,
     },
     {
-      nome: "Carlos Eduardo R.",
-      texto: "O acompanhamento online para paralisia facial foi incrível. Evolui muito sem precisar sair de casa. Dra. Rebeca é referência na área.",
+      nome: "Huly Felix",
+      texto: "Profissional incrível, me ajudou no alívio da DTM, coisa que eu nem conhecia, me esclareceu muita coisa, e o alívio da dor foi a melhor parte!!! Indico de olhos fechados… a melhor da região!!!!!!",
       estrelas: 5,
     },
     {
-      nome: "Fernanda Costa",
-      texto: "Tive resultados que nunca imaginei após o pós-operatório. A dedicação e o conhecimento da Dra. Rebeca fazem toda a diferença no tratamento.",
+      nome: "Ana Eugênia Mendes Carvalho",
+      texto: "Gostei muito do atendimento tive ótimos resultados recomendo muito.",
       estrelas: 5,
     },
   ],
 
-  /* ----------------------------------------------------------
-   * CARTÃO DE VISITA VIRTUAL
-   * ---------------------------------------------------------- */
-  cartao: {
-    foto: "assets/images/foto-hero.jpg", // ← pode ser outra foto específica
-    resumo: "Fisioterapeuta especializada em Fisioterapia Bucomaxilofacial, com foco no tratamento das disfunções de cabeça, face e pescoço. Atendimento humanizado, baseado em evidências científicas e comprometido com a qualidade de vida dos pacientes.",
+  /* ==========================================================
+     🔴 BLOCOS DE BACKUP (Alterar aqui NÃO muda nada no site)
+     Esses blocos foram mantidos apenas para você ter um local 
+     fácil para copiar e colar os textos diretamente no index.html 
+     ou cartao.html quando for editá-los.
+     ========================================================== */
+
+  _backupHero: {
+    fraseInspiradora: "Cuidar do movimento é devolver qualidade de vida, conforto e confiança para sorrir, falar e viver.",
+    descricao: "Especialista no tratamento das disfunções de cabeça, face e pescoço, promovendo alívio da dor, recuperação funcional e melhora da qualidade de vida.",
   },
+
+  _backupQuemSou: {
+    texto: `Sou fisioterapeuta e atuo na área de Fisioterapia Bucomaxilofacial...`,
+  },
+
+  _backupCartaoVirtual: {
+    resumo: "Fisioterapeuta especializada em Fisioterapia Bucomaxilofacial, com foco no tratamento das disfunções de cabeça, face e pescoço...",
+  }
+
 };
 
 if (typeof module !== "undefined") module.exports = CONTENT;

@@ -41,10 +41,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/sections/nav.css" />
-  <link rel="stylesheet" href="css/sections/hero.css" />
-  <link rel="stylesheet" href="css/sections/sections.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/sections/nav.css" />
+  <link rel="stylesheet" href="./css/sections/hero.css" />
+  <link rel="stylesheet" href="./css/sections/sections.css" />
 </head>
 
 <body>
@@ -162,46 +162,41 @@
     </section>
 
 
-    <!-- ================================================
-       QUEM SOU
-       ================================================ -->
     <section id="quem-sou" class="about section" aria-label="Sobre a Dra. Rebeca Aragão">
       <div class="container">
         <div class="about__inner">
 
+          <div class="about__graphic-wrapper reveal">
+            <div class="about__shape about__shape--circle"></div>
+            <div class="about__shape about__shape--dots"></div>
 
-          <div>
+            <div class="about__photo-frame">
+              <img src="./assets/images/04.jpeg" alt="Dra. Rebeca Aragão" class="about__photo">
+
+              <div class="about__photo-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__text-content">
             <span class="section-eyebrow reveal">Conheça</span>
-            <h2 class="section-title reveal reveal-delay-1">Quem sou</h2>
+            <h2 class="section-title reveal reveal-delay-1">Quem sou eu</h2>
             <div class="divider-line reveal reveal-delay-2"></div>
+
             <p class="about__text reveal reveal-delay-2">
-              <!--
-              Edite o texto em data/content.js → CONTENT.quemSou.texto
-            -->
-              Sou fisioterapeuta especializada em Fisioterapia Bucomaxilofacial, uma área que une
-              conhecimento aprofundado da anatomia da cabeça, face e pescoço ao cuidado humanizado
-              com o paciente. Minha trajetória foi construída com dedicação à formação continuada,
-              ao atendimento de excelência e à busca constante por evidências científicas que
-              fundamentem cada tratamento.
-              <br><br>
-              Acredito que cada paciente é único e merece uma avaliação individualizada, um plano
-              terapêutico personalizado e, acima de tudo, acolhimento. Meu compromisso é devolver
-              a você o conforto, a função e a qualidade de vida que merece.
+              Sou fisioterapeuta e atuo na área de Fisioterapia Bucomaxilofacial, que é especializada em tratar
+              disfunções das regiões de cabeça, face e pescoço.<br><br>
+              Minha trajetória foi construída com dedicação à formação continuada, ao atendimento de excelência e
+              humanizado, com busca constante por evidências científicas que fundamentem cada tratamento.<br><br>
+              Acredito que cada paciente é único e merece um atendimento individualizado, um plano terapêutico
+              personalizado, e, acima de tudo, acolhimento.<br><br>
+              Meu compromisso é devolver a você, conforto, função e a qualidade de vida que merece.
             </p>
-            <!-- <ul class="about__checks">
-              <li class="about__check reveal reveal-delay-3">
-                <span class="about__check-icon" aria-hidden="true">✓</span>Atendimento humanizado
-              </li>
-              <li class="about__check reveal reveal-delay-3">
-                <span class="about__check-icon" aria-hidden="true">✓</span>Avaliação individualizada
-              </li>
-              <li class="about__check reveal reveal-delay-4">
-                <span class="about__check-icon" aria-hidden="true">✓</span>Tratamento baseado em evidências
-              </li>
-              <li class="about__check reveal reveal-delay-4">
-                <span class="about__check-icon" aria-hidden="true">✓</span>Atendimento presencial e online
-              </li>
-            </ul> -->
           </div>
 
         </div>
@@ -210,38 +205,32 @@
 
 
     <!-- ================================================
-       ESPECIALIDADES
+       ÁREAS DE ATUAÇÃO
        ================================================ -->
-    <section id="especialidades" class="specialties section" aria-label="Áreas de atuação">
+    <section id="especialidades" class="specialties section" aria-label="Áreas de atuação da Dra. Rebeca Aragão">
       <div class="container">
 
+        <!-- Cabeçalho Principal -->
         <div class="specialties__header reveal">
-          <span class="section-eyebrow">O que trato</span>
-          <h2 class="section-title">Áreas de Atuação</h2>
-          <!-- <p class="section-subtitle" style="max-width:520px;">
-            Atendimento especializado para as principais disfunções de cabeça, face e pescoço,
-            com protocolos baseados nas melhores evidências científicas.
-          </p> -->
+          <span class="section-eyebrow">O que eu trato</span>
+          <h2 class="section-title">Especialidades</h2>
         </div>
 
-        <!-- Cards principais — gerados por builder.js -->
+        <!-- Cards principais interativos — gerados por builder.js -->
         <div id="spec-main-grid" class="spec-main-grid"></div>
 
-        <!-- Bloco Pós-operatório -->
-        <div class="posop-block reveal">
+        <!-- Bloco Pós-operatório Editorial -->
+        <div class="posop-wrapper reveal">
           <div class="posop-header">
-            <div class="posop-header__label">
-              <span class="section-eyebrow">Especialidade</span>
-              <h2 class="section-title">Pós-operatório de Cirurgias Bucomaxilofaciais</h2>
-            </div>
-            <p class="posop-header__desc">
-              A reabilitação fisioterapêutica após cirurgias bucomaxilofaciais é essencial para
-              resultados duradouros e recuperação segura. Cada protocolo é adaptado ao tipo de
-              intervenção e à evolução individual do paciente.
+            <h2 class="posop-title">Pós-operatório Bucomaxilofacial</h2>
+            <p class="posop-desc">
+              A reabilitação é essencial para resultados duradouros. Cada protocolo é rigorosamente adaptado ao tipo de
+              intervenção e à sua evolução.
             </p>
           </div>
-          <!-- Cards pós-op — gerados por builder.js -->
-          <div id="posop-grid" class="posop-grid"></div>
+
+          <!-- Lista editorial pós-op — gerados por builder.js -->
+          <div id="posop-list" class="posop-list"></div>
         </div>
 
       </div>
@@ -383,34 +372,32 @@
       </div>
     </section>
 
-  </main>
-
-
-  <!-- ================================================
-     LIGHTBOX (criado em builder.js)
-     ================================================ -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de tratamentos">
-    <div class="lightbox__header">
-      <h2 class="lightbox__title"></h2>
-      <button class="lightbox__close" aria-label="Fechar galeria">✕</button>
-    </div>
-    <div class="lightbox__main">
-      <div class="lightbox__img-wrap"></div>
-      <div class="lightbox__nav">
-        <button id="lb-prev" class="lightbox__nav-btn" aria-label="Foto anterior">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <button id="lb-next" class="lightbox__nav-btn" aria-label="Próxima foto">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de fotos">
+      <div class="lightbox__header">
+        <h3 class="lightbox__title">Título</h3>
+        <button class="lightbox__close" aria-label="Fechar galeria">✕</button>
+      </div>
+      <div class="lightbox__main">
+        <div class="lightbox__img-wrap">
+        </div>
+        <nav class="lightbox__nav">
+          <button id="lb-prev" class="lightbox__nav-btn" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <button id="lb-next" class="lightbox__nav-btn" aria-label="Próxima foto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div class="lightbox__thumbs">
       </div>
     </div>
-    <div class="lightbox__thumbs"></div>
-  </div>
+
+  </main>
 
 
   <!-- ================================================

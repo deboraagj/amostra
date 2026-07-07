@@ -12,12 +12,12 @@
 
 /* Foto de fundo */
 .hero__bg-photo {
-  position:absolute;
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position:20% 30%;
+  object-position: 20% 30%;
   opacity: .45;
   /* Sem foto ainda: fundo escuro */
 }
@@ -189,6 +189,12 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+
+  .hero__bg-photo {
+    object-position: center left;
+    transform: translateY(-100px);
+  }
+
   .hero__inner {
     padding-bottom: var(--space-2xl);
   }

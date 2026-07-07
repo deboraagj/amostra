@@ -9,34 +9,33 @@ export function buildSections() {
   buildContact();
 }
 
-/* ---- ESPECIALIDADES ---- */
+/* ---- ÁREAS DE ATUAÇÃO ---- */
 function buildSpecialties() {
   const main = document.getElementById('spec-main-grid');
-  if (!main) return;
+  if (main) {
+    main.innerHTML = CONTENT.especialidadesPrincipais.map((esp, i) => {
+      // Ajuste na lógica da badge para combinar com o design limpo
+      return `
+        <div class="spec-main-card reveal reveal-delay-${i + 1}">
+          <div class="spec-main-card__body">
+            <h3 class="spec-main-card__name">${esp.nome}</h3>
+            <p class="spec-main-card__desc">${esp.desc}</p>
+          </div>
+          ${esp.destaque ? `<span class="spec-main-card__badge">${esp.destaque}</span>` : ''}
+        </div>`;
+    }).join('');
+  }
 
-  main.innerHTML = CONTENT.especialidadesPrincipais.map((esp, i) => {
-    const featured = esp.destaque ? 'spec-main-card--featured' : '';
-    return `
-      <div class="spec-main-card ${featured} reveal reveal-delay-${i + 1}">
-        <div class="spec-main-card__icon">${ICONS[esp.icon] || ''}</div>
-        <div class="spec-main-card__body">
-          
-          <h3 class="spec-main-card__name">${esp.nome}</h3>
-          <p class="spec-main-card__desc">${esp.desc}</p>
+  const posop = document.getElementById('posop-list');
+  if (posop) {
+    posop.innerHTML = CONTENT.posOperatorio.map((item, i) => `
+      <div class="posop-item reveal reveal-delay-${i + 1}">
+        <div class="posop-item__num">${item.num}</div>
+        <div class="posop-item__content">
+          <h3 class="posop-item__name">${item.nome}</h3>
         </div>
-        ${esp.destaque ? `<span class="spec-main-card__badge">${esp.destaque}</span>` : ''}
-      </div>`;
-  }).join('');
-
-  const posop = document.getElementById('posop-grid');
-  if (!posop) return;
-  posop.innerHTML = CONTENT.posOperatorio.map((item, i) => `
-    <div class="posop-card reveal reveal-delay-${i + 1}">
-      <div class="posop-card__num">${item.num}</div>
-      <div>
-        <h3 class="posop-card__name">${item.nome}</h3>
-      </div>
-    </div>`).join('');
+      </div>`).join('');
+  }
 }
 
 /* ---- TRATAMENTOS ---- */
@@ -94,11 +93,16 @@ function openLightbox(id) {
   if (!item) return;
 
   const lb = document.getElementById('lightbox');
-  if (!lb) return;
+  
+  // Se ele não achar o HTML da galeria, ele vai te avisar na tela!
+  if (!lb) {
+    alert("Ops! O JavaScript funcionou, mas não encontrou o HTML do #lightbox na página. Verifique se você colou a estrutura da galeria no index.html!");
+    return;
+  }
 
   let current = 0;
   const fotos = item.galeria;
-
+  
   // Título
   lb.querySelector('.lightbox__title').textContent = item.nome;
 
