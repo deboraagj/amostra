@@ -19,10 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ano no rodapé
   const yr = document.getElementById('footer-year');
   if (yr) yr.textContent = new Date().getFullYear();
-
-  // Link "como chegar"
-  const chegaBtn = document.getElementById('btn-como-chegar');
-  if (chegaBtn && CONTENT?.contato?.googleMaps) {
-    chegaBtn.href = CONTENT.contato.googleMaps;
-  }
 });

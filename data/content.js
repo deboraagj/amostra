@@ -22,10 +22,10 @@ const CONTENT = {
     telefone: "(77) 98819-9001",
     instagram: "https://instagram.com/fisio_rebecaaragao",
     google: "https://share.google/C9dFz98t0YAGcX2uR",
-    email: "seuemail@email.com",   // ← substitua
+    email: "rebecaaragao.fisio@gmail.com",   // ← substitua
     endereco: "Vitória da Conquista – BA",
-    googleMaps: "#",                    // ← substitua pelo link do Google Maps
-    siteUrl: "https://www.seusite.com.br",
+    googleMaps: "#",                   // ← substitua pelo link do Google Maps
+    siteUrl: "https://www.seusite.com.br"
   },
 
   especialidadesPrincipais: [
@@ -89,58 +89,51 @@ const CONTENT = {
 
   tratamentos: [
     {
+      // CARD 01
       id: "dtm-caso-1",
       nome: "Tratamento de DTM",
       desc: "Reabilitação funcional com resolução de dor e limitação de abertura bucal.",
-      capa: "assets/images/tratamentos/01.jpg",     // ← substitua
+      capa: "assets/images/tratamentos/card01/before-01.png",     // ← substitua
       galeria: [
-        "assets/images/tratamentos/01.jpg",
-        "assets/images/tratamentos/02.jpg",
-        "assets/images/tratamentos/04.jpg",
+        "assets/images/tratamentos/card01/before-01.png",
+        "assets/images/tratamentos/card01/before-02.png",
+        "assets/images/tratamentos/card01/after-01.png",
+        "assets/images/tratamentos/card01/after-02.png"
       ],
     },
     {
+      // CARD 02
       id: "paralisia-caso-1",
       nome: "Paralisia Facial",
       desc: "Recuperação progressiva da simetria e motricidade facial com protocolo especializado.",
-      capa: "assets/images/tratamentos/02.jpg",
+      capa: "assets/images/tratamentos/card02/before.png",
       galeria: [
-        "assets/images/tratamentos/01.jpg",
-        "assets/images/tratamentos/02.jpg",
-        "assets/images/tratamentos/04.jpg",
+        "assets/images/tratamentos/card02/before.png",
+        "assets/images/tratamentos/card02/after.png",
       ],
     },
     {
+      // CARD 03
+
       id: "ortognatica-caso-1",
       nome: "Pós-op Ortognática",
       desc: "Reabilitação completa após cirurgia ortognática, devolvendo função e conforto.",
-      capa: "assets/images/tratamentos/03.jpg",
+      capa: "assets/images/tratamentos/card03/before.png",
       galeria: [
-        "assets/images/tratamentos/01.jpg",
-        "assets/images/tratamentos/02.jpg",
-        "assets/images/tratamentos/04.jpg",
+        "assets/images/tratamentos/card03/before.png",
+        "assets/images/tratamentos/card03/before.png",
       ],
     },
     {
+      // CARD 04
       id: "trauma-caso-1",
       nome: "Trauma de Face",
       desc: "Recuperação funcional após trauma facial, restaurando mobilidade e qualidade de vida.",
-      capa: "assets/images/tratamentos/04.jpg",
+      capa: "assets/images/tratamentos/card05/before.png",
       galeria: [
-        "assets/images/tratamentos/01.jpg",
-        "assets/images/tratamentos/02.jpg",
-        "assets/images/tratamentos/04.jpg",
-      ],
-    },
-    {
-      id: "dor-orofacial-caso-1",
-      nome: "Dor Orofacial Crônica",
-      desc: "Controle e eliminação de dores crônicas na região orofacial com abordagem multidisciplinar.",
-      capa: "assets/images/tratamentos/03.jpg",
-      galeria: [
-        "assets/images/tratamentos/01.jpg",
-        "assets/images/tratamentos/02.jpg",
-        "assets/images/tratamentos/04.jpg",
+        "assets/images/tratamentos/card05/before.png",
+        "assets/images/tratamentos/card05/during.png",
+        "assets/images/tratamentos/card05/after.png",
       ],
     },
   ],
@@ -169,6 +162,11 @@ const CONTENT = {
     {
       nome: "Ana Eugênia Mendes Carvalho",
       texto: "Gostei muito do atendimento tive ótimos resultados recomendo muito.",
+      estrelas: 5,
+    },
+    {
+      nome: "Cida Santos",
+      texto: "Oi a minha experiência na verdade foi pra minha filha que e especial. Ela estava tendo um descolamento do maxilar e tivemos como indicação pra Dr. Rebeca foi muito bom e de total confiança. A minha filha se sentiu muito segura com o atendimento dela. Depois das fisioterapias a minha filha não teve mais nenhum descolamento. Só gratidão por ter uma profissional competente e carinhosa como você Rebeca.",
       estrelas: 5,
     },
   ],

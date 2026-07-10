@@ -14,7 +14,6 @@ function buildSpecialties() {
   const main = document.getElementById('spec-main-grid');
   if (main) {
     main.innerHTML = CONTENT.especialidadesPrincipais.map((esp, i) => {
-      // Ajuste na lógica da badge para combinar com o design limpo
       return `
         <div class="spec-main-card reveal reveal-delay-${i + 1}">
           <div class="spec-main-card__body">
@@ -94,7 +93,6 @@ function openLightbox(id) {
 
   const lb = document.getElementById('lightbox');
   
-  // Se ele não achar o HTML da galeria, ele vai te avisar na tela!
   if (!lb) {
     alert("Ops! O JavaScript funcionou, mas não encontrou o HTML do #lightbox na página. Verifique se você colou a estrutura da galeria no index.html!");
     return;
@@ -102,7 +100,7 @@ function openLightbox(id) {
 
   let current = 0;
   const fotos = item.galeria;
-  
+
   // Título
   lb.querySelector('.lightbox__title').textContent = item.nome;
 
@@ -137,6 +135,31 @@ function openLightbox(id) {
 
   lb.querySelector('#lb-prev').onclick = () => render((current - 1 + fotos.length) % fotos.length);
   lb.querySelector('#lb-next').onclick = () => render((current + 1) % fotos.length);
+
+  // SUPORTE A SWIPE (DESLIZAR O DEDO NO MOBILE)
+  const lightboxMain = lb.querySelector('.lightbox__main');
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightboxMain.ontouchstart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
+
+  lightboxMain.ontouchend = (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const swipeDistance = touchStartX - touchEndX;
+    const minSwipeDistance = 50;
+
+    if (swipeDistance > minSwipeDistance) {
+      render((current + 1) % fotos.length);
+    } else if (swipeDistance < -minSwipeDistance) {
+      render((current - 1 + fotos.length) % fotos.length);
+    }
+  };
 
   render(0);
   lb.classList.add('open');
@@ -210,15 +233,21 @@ function buildTestimonials() {
 function buildContact() {
   const grid = document.getElementById('contact-grid');
   if (!grid) return;
+  
   const c = CONTENT.contato;
+  
+  // Link personalizado do Gmail com assunto e corpo da mensagem pré-preenchidos
+  const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=rebecaaragao.fisio@gmail.com&su=Gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia%20bucomaxilofacial&body=Olá,%20Rebeca!%0A%0ATenho%20interesse%20em%20conhecer%20mais%20sobre%20o%20tratamento%20de%20fisioterapia%20bucomaxilofacial.%20Gostaria%20de%20entender%20como%20funciona%20o%20tratamento,%20quais%20são%20as%20indicações%20e%20como%20posso%20agendar%20uma%20avaliação.%0A%0AFico%20no%20aguardo!";
+
   const cards = [
     { icon: 'whatsapp', label: 'WhatsApp', value: c.whatsappNum, sub: 'Clique para conversar', href: c.whatsapp },
     { icon: 'phone', label: 'Telefone', value: c.telefone, sub: 'Ligue para nós', href: `tel:${c.telefone.replace(/\D/g, '')}` },
     { icon: 'instagram', label: 'Instagram', value: '@fisio_rebecaaragao', sub: 'Siga nossas novidades', href: c.instagram },
-    { icon: 'email', label: 'E-mail', value: c.email, sub: 'Envie uma mensagem', href: `mailto:${c.email}` },
+    { icon: 'email', label: 'E-mail', value: 'rebecaaragao.fisio@gmail.com', sub: 'Envie uma mensagem', href: gmailLink },
     { icon: 'location', label: 'Localização', value: c.endereco, sub: 'Ver no mapa', href: c.googleMaps },
     { icon: 'google', label: 'Google', value: 'Avalie no Google', sub: 'Sua opinião importa', href: c.google },
   ];
+
   grid.innerHTML = cards.map((card, i) => `
     <a class="contact-card reveal reveal-delay-${(i % 3) + 1}"
        href="${card.href}" target="_blank" rel="noopener noreferrer"

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cartão de Visita — Dra. Rebeca Aragão</title>
-  <meta name="description" content="Cartão de visita virtual da Dra. Rebeca Aragão, fisioterapeuta especialista em Fisioterapia Bucomaxilofacial." />
+  <meta name="description"
+    content="Cartão de visita virtual da Dra. Rebeca Aragão, fisioterapeuta especialista em Fisioterapia Bucomaxilofacial." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
@@ -31,8 +33,15 @@
       transition: color var(--transition-fast);
       align-self: flex-start;
     }
-    .card-back:hover { color: var(--marrom); }
-    .card-back svg { width: 16px; height: 16px; }
+
+    .card-back:hover {
+      color: var(--marrom);
+    }
+
+    .card-back svg {
+      width: 16px;
+      height: 16px;
+    }
 
     /* ---- Card principal ---- */
     .vcard {
@@ -48,51 +57,70 @@
     .vcard__header {
       background: var(--marrom);
       position: relative;
-      padding: var(--space-2xl) var(--space-xl) 60px;
+      padding: var(--space-2xl) var(--space-xl) 20px;
       text-align: center;
       overflow: hidden;
     }
+
     .vcard__header::before {
       content: '';
       position: absolute;
-      top: -80px; right: -80px;
-      width: 280px; height: 280px;
+      top: -80px;
+      right: -80px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
-      background: rgba(226,201,154,.08);
+      background: rgba(226, 201, 154, .08);
     }
+
     .vcard__header::after {
       content: '';
       position: absolute;
-      bottom: -40px; left: -40px;
-      width: 180px; height: 180px;
+      bottom: -40px;
+      left: -40px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: rgba(226,201,154,.06);
+      background: rgba(226, 201, 154, .06);
     }
 
     .vcard__photo-ring {
-      width: 110px; height: 110px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      border: 3px solid rgba(226,201,154,.4);
+      border: 3px solid rgba(226, 201, 154, .4);
       padding: 3px;
       margin: 0 auto var(--space-md);
       position: relative;
       z-index: 1;
     }
+
     .vcard__photo {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       object-fit: cover;
       object-position: top center;
       background: var(--marrom-medio);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
     }
+
     .vcard__photo-placeholder {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.3);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, .3);
     }
-    .vcard__photo-placeholder svg { width: 48px; height: 48px; }
+
+    .vcard__photo-placeholder svg {
+      width: 48px;
+      height: 48px;
+    }
 
     .vcard__name {
       font-family: var(--font-titulo);
@@ -100,31 +128,40 @@
       font-weight: 400;
       color: var(--branco);
       margin-bottom: 4px;
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
     }
-    .vcard__name em { font-style: italic; color: var(--bege); }
+
+    .vcard__name em {
+      font-style: italic;
+      color: var(--bege);
+    }
 
     .vcard__spec {
       font-size: var(--text-sm);
-      color: rgba(226,201,154,.8);
+      color: rgba(226, 201, 154, .8);
       letter-spacing: .06em;
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
       margin-bottom: 6px;
     }
+
     .vcard__crefito {
       font-size: var(--text-xs);
-      color: rgba(255,255,255,.4);
+      color: rgba(255, 255, 255, .4);
       letter-spacing: .1em;
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
     }
 
     /* Bio */
     .vcard__bio {
-      padding: var(--space-xl);
+      padding: 20px;
       border-bottom: 1px solid var(--bege-claro);
     }
-    .vcard__bio p {
-      font-size: var(--text-sm);
+
+    #itens {
+      font-size: 1rem;
       color: var(--cinza-texto);
       line-height: 1.75;
       text-align: center;
@@ -152,50 +189,74 @@
       color: var(--preto-suave);
       width: 100%;
     }
+
     .vcard__btn:hover {
       background: var(--bege-claro);
       border-color: var(--bege);
       transform: translateY(-1px);
       box-shadow: var(--shadow-sm);
     }
+
     .vcard__btn--primary {
       background: var(--marrom);
       border-color: var(--marrom);
       color: var(--branco);
     }
+
     .vcard__btn--primary:hover {
       background: var(--marrom-medio);
       border-color: var(--marrom-medio);
     }
 
     .vcard__btn-icon {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: var(--radius-md);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
-      background: rgba(255,255,255,.15);
+      background: rgba(255, 255, 255, .15);
     }
-    .vcard__btn--primary .vcard__btn-icon { background: rgba(255,255,255,.15); }
+
+    .vcard__btn--primary .vcard__btn-icon {
+      background: rgba(255, 255, 255, .15);
+    }
+
     .vcard__btn:not(.vcard__btn--primary) .vcard__btn-icon {
       background: var(--bege-claro);
       color: var(--marrom);
     }
-    .vcard__btn-icon svg { width: 20px; height: 20px; }
 
-    .vcard__btn-text { flex: 1; text-align: left; }
+    .vcard__btn-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .vcard__btn-text {
+      flex: 1;
+      text-align: left;
+    }
+
     .vcard__btn-label {
-      font-size: 10px;
+      font-size: 15px;
+      text-align: center;
       text-transform: uppercase;
       letter-spacing: .1em;
       opacity: .55;
       display: block;
       margin-bottom: 1px;
     }
-    .vcard__btn--primary .vcard__btn-label { opacity: .7; }
+
+    .vcard__btn--primary .vcard__btn-label {
+      opacity: .7;
+    }
+
     .vcard__btn-value {
       font-size: var(--text-sm);
       font-weight: 500;
     }
+
     .vcard__btn-arrow {
       opacity: .3;
       font-size: var(--text-lg);
@@ -207,23 +268,19 @@
       margin: 0 var(--space-xl) var(--space-xl);
       background: linear-gradient(135deg, var(--bege-claro), var(--bege));
       border-radius: var(--radius-lg);
-      padding: var(--space-lg);
+      padding: none;
       text-align: center;
-      border: 1px solid rgba(226,201,154,.4);
+      border: 1px solid rgba(226, 201, 154, .4);
     }
+
     .vcard__share-title {
       font-family: var(--font-titulo);
       font-size: var(--text-lg);
       font-weight: 400;
       color: var(--preto-suave);
-      margin-bottom: 6px;
+      margin: 12px;
     }
-    .vcard__share-sub {
-      font-size: var(--text-sm);
-      color: var(--cinza-texto);
-      margin-bottom: var(--space-md);
-      line-height: 1.55;
-    }
+
     .vcard__share-btn {
       background: var(--marrom);
       color: var(--branco);
@@ -236,20 +293,21 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       transition: all var(--transition-normal);
       box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
     }
-    .vcard__share-btn:hover { background: var(--marrom-medio); transform: translateY(-1px); }
-    .vcard__share-btn svg { width: 18px; height: 18px; }
 
-    .vcard__copy-feedback {
-      font-size: var(--text-xs);
-      color: var(--marrom);
-      margin-top: var(--space-sm);
-      min-height: 18px;
-      transition: opacity var(--transition-normal);
+    .vcard__share-btn:hover {
+      background: var(--marrom-medio);
+      transform: translateY(-1px);
     }
+
+    .vcard__share-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
 
     /* Rodapé do card */
     .vcard__footer {
@@ -257,6 +315,7 @@
       padding: var(--space-md) var(--space-xl) var(--space-xl);
       border-top: 1px solid var(--bege-claro);
     }
+
     .vcard__footer p {
       font-size: var(--text-xs);
       color: var(--oliva);
@@ -264,194 +323,186 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="card-page">
+  <div class="card-page">
+    <!-- Card -->
+    <div class="vcard">
 
-  <!-- Voltar -->
-  <a href="index.html" class="card-back">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="15 18 9 12 15 6"/>
-    </svg>
-    Voltar ao site
-  </a>
+      <!-- Cabeçalho -->
+      <div class="vcard__header">
+        <div class="vcard__photo-ring">
+          <div class="vcard__photo">
 
-  <!-- Card -->
-  <div class="vcard">
+            <img src="assets/images/04.jpeg" alt="Dra. Rebeca Aragão"
+              style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
 
-    <!-- Cabeçalho -->
-    <div class="vcard__header">
-      <div class="vcard__photo-ring">
-        <div class="vcard__photo">
-          <!--
-            ════════════════════════════════════════════
-            FOTO DO CARTÃO
-            Substitua o <div> abaixo por:
-
-            <img src="assets/images/foto-hero.jpg"
-                 alt="Dra. Rebeca Aragão"
-                 style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
-            ════════════════════════════════════════════
-          -->
-          <div class="vcard__photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
+            <div class="vcard__photo-placeholder">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+            </div>
           </div>
         </div>
+        <h1 class="vcard__name">Dra. <em>Rebeca</em> Aragão</h1>
+        <p class="vcard__spec">Fisioterapia Bucomaxilofacial</p>
+        <p class="vcard__crefito">CREFITO 318120-F</p>
       </div>
-      <h1 class="vcard__name">Dra. <em>Rebeca</em> Aragão</h1>
-      <p class="vcard__spec">Fisioterapia Bucomaxilofacial</p>
-      <p class="vcard__crefito">CREFITO 318120-F</p>
-    </div>
 
-    <!-- Bio -->
-    <div class="vcard__bio">
-      <p>
-        Fisioterapeuta especializada em Fisioterapia Bucomaxilofacial, com foco no tratamento
-        das disfunções de cabeça, face e pescoço. Atendimento humanizado, baseado em evidências
-        científicas e comprometido com a qualidade de vida dos pacientes.
-      </p>
-    </div>
+      <!-- Bio -->
+      <div class="vcard__bio">
+        <p>
+        <div id="itens">DTM</div>
+        <div id="itens">Dor Orofacial</div>
+        <div id="itens">Zumbido</div>
+        <div id="itens">Paralisia Facial</div>
+        <div id="itens">Pós-operatório Bucomaxilofacial</div>
+        </p>
+      </div>
 
-    <!-- Ações -->
-    <div class="vcard__actions">
+      <!-- Ações -->
+      <div class="vcard__actions">
 
-      <a href="http://wa.me/5577988199001" target="_blank" rel="noopener noreferrer"
-         class="vcard__btn vcard__btn--primary">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">WhatsApp</span>
-          <span class="vcard__btn-value">(77) 98819-9001</span>
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
+        <a href="http://wa.me/5577988199001" target="_blank" rel="noopener noreferrer"
+          class="vcard__btn vcard__btn--primary">
+          <div class="vcard__btn-icon">
+            <svg viewBox="0 0 24 24" fill="white">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </div>
+          <div class="vcard__btn-text">
+            <span class="vcard__btn-label">WhatsApp</span>
+          </div>
+          <span class="vcard__btn-arrow">›</span>
+        </a>
 
-      <a href="tel:77988199001" class="vcard__btn">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">Ligar</span>
-          <span class="vcard__btn-value">(77) 98819-9001</span>
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
+        <a href="tel:77988199001" class="vcard__btn">
+          <div class="vcard__btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" />
+            </svg>
+          </div>
+          <div class="vcard__btn-text">
+            <span class="vcard__btn-label">Ligar</span>
+          </div>
+          <span class="vcard__btn-arrow">›</span>
+        </a>
 
-      <a href="mailto:seuemail@email.com" class="vcard__btn">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">E-mail</span>
-          <span class="vcard__btn-value">seuemail@email.com</span><!-- ← substitua -->
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
+        <a href="https://instagram.com/fisio_rebecaaragao" target="_blank" rel="noopener noreferrer" class="vcard__btn">
+          <div class="vcard__btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </div>
+          <div class="vcard__btn-text">
+            <span class="vcard__btn-label">Instagram</span>
+          </div>
+          <span class="vcard__btn-arrow">›</span>
+        </a>
 
-      <a href="https://instagram.com/fisio_rebecaaragao" target="_blank" rel="noopener noreferrer" class="vcard__btn">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">Instagram</span>
-          <span class="vcard__btn-value">@fisio_rebecaaragao</span>
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rebecaaragao.fisio@gmail.com&su=Gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia%20bucomaxilofacial&body=Olá,%20Rebeca!%0A%0ATenho%20interesse%20em%20conhecer%20mais%20sobre%20o%20tratamento%20de%20fisioterapia%20bucomaxilofacial.%20Gostaria%20de%20entender%20como%20funciona%20o%20tratamento,%20quais%20são%20as%20indicações%20e%20como%20posso%20agendar%20uma%20avaliação.%0A%0AFico%20no%20aguardo!"
+          target="_blank" class="vcard__btn">
+          <div class="vcard__btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </div>
+          <div class="vcard__btn-text">
+            <span class="vcard__btn-label">E-mail</span>
+          </div>
+          <span class="vcard__btn-arrow">›</span>
+        </a>
 
-      <a href="https://share.google/x750evJ98upDAzn2G" target="_blank" rel="noopener noreferrer" class="vcard__btn">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">Google</span>
-          <span class="vcard__btn-value">Ver avaliações</span>
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
 
-      <a href="index.html" class="vcard__btn">
-        <div class="vcard__btn-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="vcard__btn-text">
-          <span class="vcard__btn-label">Site</span>
-          <span class="vcard__btn-value">Acessar o site completo</span>
-        </div>
-        <span class="vcard__btn-arrow">›</span>
-      </a>
+        <a href="index.html" class="vcard__btn">
+          <div class="vcard__btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M3 8h18" />
+              <circle cx="6" cy="6" r="0.5" fill="currentColor" />
+              <circle cx="8.5" cy="6" r="0.5" fill="currentColor" />
+              <circle cx="11" cy="6" r="0.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="vcard__btn-text">
+            <span class="vcard__btn-label">Site</span>
+          </div>
+          <span class="vcard__btn-arrow">›</span>
+        </a>
 
-    </div><!-- /vcard__actions -->
+      </div><!-- /vcard__actions -->
 
-    <!-- Compartilhar -->
-    <div class="vcard__share">
-      <h2 class="vcard__share-title">Compartilhar Cartão</h2>
-      <p class="vcard__share-sub">
-        Envie este cartão para amigos, familiares ou pacientes que possam se beneficiar do tratamento.
-      </p>
-      <button class="vcard__share-btn" id="share-btn" aria-label="Compartilhar cartão">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-        </svg>
-        Compartilhar
-      </button>
-      <p class="vcard__copy-feedback" id="copy-feedback" aria-live="polite"></p>
-    </div>
+      <!-- Compartilhar -->
+      <div class="vcard__share">
+        <h2 class="vcard__share-title">compartilhe este cartão</h2>
+        <button class="vcard__share-btn" id="share-btn" aria-label="Compartilhar cartão">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+          Compartilhar
+        </button>
+      </div>
 
-    <!-- Rodapé do card -->
-    <div class="vcard__footer">
-      <p>Fisioterapia Bucomaxilofacial · CREFITO 318120-F</p>
-    </div>
+      <!-- Rodapé do card -->
+      <div class="vcard__footer">
+        <p>Fisioterapia Bucomaxilofacial · CREFITO 318120-F</p>
+      </div>
 
-  </div><!-- /vcard -->
+    </div><!-- /vcard -->
 
-</div><!-- /card-page -->
+  </div><!-- /card-page -->
 
-<script>
-  const shareBtn = document.getElementById('share-btn');
-  const feedback = document.getElementById('copy-feedback');
-  // URL deste cartão — substitua pela URL real
-  const cardUrl  = 'https://www.seusite.com.br/cartao.html';
+  <script>
+    const shareBtn = document.getElementById('share-btn');
+    const feedback = document.getElementById('copy-feedback');
+    // URL deste cartão — substitua pela URL real
+    const cardUrl = 'https://www.seusite.com.br/cartao.html';
 
-  shareBtn.addEventListener('click', async () => {
-    // Web Share API (nativa do celular)
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: 'Dra. Rebeca Aragão — Fisioterapia Bucomaxilofacial',
-          text:  'Conheça o cartão de visita virtual da Dra. Rebeca Aragão, especialista em Fisioterapia Bucomaxilofacial.',
-          url:   cardUrl,
-        });
-      } catch (e) {
-        // Usuário cancelou — silencioso
+    shareBtn.addEventListener('click', async () => {
+      // Web Share API (nativa do celular)
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Dra. Rebeca Aragão — Fisioterapia Bucomaxilofacial',
+            text: 'Conheça o cartão de visita virtual da Dra. Rebeca Aragão, especialista em Fisioterapia Bucomaxilofacial.',
+            url: cardUrl,
+          });
+        } catch (e) {
+          // Usuário cancelou — silencioso
+        }
+        return;
       }
-      return;
-    }
 
-    // Fallback: copiar link
-    try {
-      await navigator.clipboard.writeText(cardUrl);
-      feedback.textContent = '✓ Link copiado! Agora é só colar e compartilhar.';
-    } catch {
-      // Fallback para browsers sem clipboard API
-      const ta = document.createElement('textarea');
-      ta.value = cardUrl;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      ta.remove();
-      feedback.textContent = '✓ Link copiado!';
-    }
-    setTimeout(() => { feedback.textContent = ''; }, 3500);
-  });
-</script>
+      // Fallback: copiar link
+      try {
+        await navigator.clipboard.writeText(cardUrl);
+        feedback.textContent = '✓ Link copiado! Agora é só colar e compartilhar.';
+      } catch {
+        // Fallback para browsers sem clipboard API
+        const ta = document.createElement('textarea');
+        ta.value = cardUrl;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        feedback.textContent = '✓ Link copiado!';
+      }
+      setTimeout(() => { feedback.textContent = ''; }, 3500);
+    });
+  </script>
 
 </body>
+
 </html>
