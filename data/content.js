@@ -90,23 +90,24 @@ const CONTENT = {
   tratamentos: [
     {
       // CARD 01
-      id: "dtm-caso-1",
-      nome: "Tratamento de DTM",
+      id: "01",
+      nome: "Paralisia Facial",
       desc: "Reabilitação funcional com resolução de dor e limitação de abertura bucal.",
-      capa: "assets/images/tratamentos/card01/before-01.png",     // ← substitua
+      capa: "assets/images/tratamentos/card01/capa.png",     // ← substitua
       galeria: [
         "assets/images/tratamentos/card01/before-01.png",
         "assets/images/tratamentos/card01/before-02.png",
         "assets/images/tratamentos/card01/after-01.png",
-        "assets/images/tratamentos/card01/after-02.png"
+        "assets/images/tratamentos/card01/after-02.png",
+        "assets/images/tratamentos/card01/after-03.png"
       ],
     },
     {
       // CARD 02
-      id: "paralisia-caso-1",
+      id: "02",
       nome: "Paralisia Facial",
       desc: "Recuperação progressiva da simetria e motricidade facial com protocolo especializado.",
-      capa: "assets/images/tratamentos/card02/before.png",
+      capa: "assets/images/tratamentos/card02/capa.png",
       galeria: [
         "assets/images/tratamentos/card02/before.png",
         "assets/images/tratamentos/card02/after.png",
@@ -115,21 +116,23 @@ const CONTENT = {
     {
       // CARD 03
 
-      id: "ortognatica-caso-1",
-      nome: "Pós-op Ortognática",
+      id: "03",
+      nome: "Paralisia Facial",
       desc: "Reabilitação completa após cirurgia ortognática, devolvendo função e conforto.",
-      capa: "assets/images/tratamentos/card03/before.png",
+      capa: "assets/images/tratamentos/card03/capa.png",
       galeria: [
-        "assets/images/tratamentos/card03/before.png",
-        "assets/images/tratamentos/card03/before.png",
+        "assets/images/tratamentos/card03/before-01.png",
+        "assets/images/tratamentos/card03/before-02.png",
+        "assets/images/tratamentos/card03/after-01.png",
+        "assets/images/tratamentos/card03/after-02.png"
       ],
     },
     {
       // CARD 04
-      id: "trauma-caso-1",
-      nome: "Trauma de Face",
+      id: "04",
+      nome: "Pós-Ortognática",
       desc: "Recuperação funcional após trauma facial, restaurando mobilidade e qualidade de vida.",
-      capa: "assets/images/tratamentos/card05/before.png",
+      capa: "assets/images/tratamentos/card05/capa.png",
       galeria: [
         "assets/images/tratamentos/card05/before.png",
         "assets/images/tratamentos/card05/during.png",
