@@ -42,10 +42,10 @@ export function initRipple() {
     const btn = e.target.closest('.btn');
     if (!btn) return;
 
-    const rect   = btn.getBoundingClientRect();
-    const size   = Math.max(rect.width, rect.height) * 2;
-    const x      = e.clientX - rect.left - size / 2;
-    const y      = e.clientY - rect.top  - size / 2;
+    const rect = btn.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height) * 2;
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
 
     const ripple = document.createElement('span');
     ripple.className = 'ripple';

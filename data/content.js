@@ -24,7 +24,7 @@ const CONTENT = {
     google: "https://share.google/C9dFz98t0YAGcX2uR",
     email: "rebecaaragao.fisio@gmail.com",   // ← substitua
     endereco: "Vitória da Conquista – BA",
-    googleMaps: "#",                   // ← substitua pelo link do Google Maps
+    googleMaps: "https://www.google.com/search?q=vitoria+da+conquista&sca_esv=f70ce224cd0841f2&sxsrf=APpeQnsJlHxBlk_g4nPKSESuIA6Azrl1mg%3A1783962183647&ei=RxpVaof_JsjM1sQPrbDd2Ao&biw=1358&bih=602&gs_ssp=eJzj4tTP1TdIs0xJMzRg9BIpyyzJL8pMVEhJVEjOzysszSwuSQQAq8kLEg&oq=vito&gs_lp=Egxnd3Mtd2l6LXNlcnAiBHZpdG8qAggEMggQLhixAxiABDIIEAAYgAQYsQMyChAAGIAEGIoFGEMyBRAAGIAEMggQLhiABBixAzIFEAAYgAQyCBAuGIAEGLEDMg4QABiABBiKBRixAxiDATIFEC4YgAQyCBAAGIAEGLEDMhcQLhixAxiABBiXBRjcBBjeBBjgBNgBAUjzJVC9B1izGHACeACQAQSYAboBoAGRC6oBAzAuObgBAcgBAPgBAZgCB6AC4QaoAhTCAgoQABiABBgNGLADwgIJEAAYHhgNGLADwgIHEAAYHhiwA8ICBBAjGCfCAgUQABjvBcICBxAjGOoCGCfCAhAQABgDGI8BGOoCGLQC2AEBwgIQEC4YAxiPARjqAhi0AtgBAcICBBAuGCfCAg4QLhiABBixAxjHARjRA8ICCxAuGIMBGLEDGIAEwgIREC4YlwUY3AQY3gQY4ATYAQHCAgsQLhiABBixAxiDAcICDRAuGIAEGIoFGEMYsQOYAw7xBadgefysJPgriAYBkAYKugYGCAEQARgKkgcDMi41oAfV3gGyBwMwLjW4B8kGwgcFMi0zLjTIBzmACAE&sclient=gws-wiz-serp",                   // ← substitua pelo link do Google Maps
     siteUrl: "https://www.seusite.com.br"
   },
 
@@ -92,13 +92,12 @@ const CONTENT = {
       // CARD 01
       id: "01",
       nome: "Paralisia Facial",
-      desc: "Reabilitação funcional com resolução de dor e limitação de abertura bucal.",
-      capa: "assets/images/tratamentos/card01/capa.png",     // ← substitua
+      desc: "Evolução expressiva na oclusão ocular e simetria do sorriso. Os resultados foram potencializados pela excelente adesão da paciente ao protocolo clínico.",
+      capa: "assets/images/tratamentos/card01/capa.png",
       galeria: [
         "assets/images/tratamentos/card01/before-01.png",
-        "assets/images/tratamentos/card01/before-02.png",
-        "assets/images/tratamentos/card01/after-01.png",
         "assets/images/tratamentos/card01/after-02.png",
+        "assets/images/tratamentos/card01/before-02.png",
         "assets/images/tratamentos/card01/after-03.png"
       ],
     },
@@ -106,11 +105,13 @@ const CONTENT = {
       // CARD 02
       id: "02",
       nome: "Paralisia Facial",
-      desc: "Recuperação progressiva da simetria e motricidade facial com protocolo especializado.",
+      desc: "Intervenção precoce iniciada no 4º dia de paralisia facial. O rápido início da reabilitação fisioterapêutica garantiu uma recuperação neuromotora progressiva e consistente a cada novo atendimento.",
       capa: "assets/images/tratamentos/card02/capa.png",
       galeria: [
         "assets/images/tratamentos/card02/before.png",
         "assets/images/tratamentos/card02/after.png",
+        "assets/images/tratamentos/card02/before-eye.png",
+        "assets/images/tratamentos/card02/after-eye.png",
       ],
     },
     {
@@ -118,25 +119,49 @@ const CONTENT = {
 
       id: "03",
       nome: "Paralisia Facial",
-      desc: "Reabilitação completa após cirurgia ortognática, devolvendo função e conforto.",
+      desc: "Resultados funcionais alcançados através da constância. A adesão rigorosa ao plano terapêutico e às orientações clínicas reverteu o quadro inicial e entregou uma excelente evolução",
       capa: "assets/images/tratamentos/card03/capa.png",
       galeria: [
-        "assets/images/tratamentos/card03/before-01.png",
         "assets/images/tratamentos/card03/before-02.png",
         "assets/images/tratamentos/card03/after-01.png",
-        "assets/images/tratamentos/card03/after-02.png"
+        "assets/images/tratamentos/card03/before-smile.png",
+        "assets/images/tratamentos/card03/after-smile.png"
       ],
     },
     {
       // CARD 04
       id: "04",
       nome: "Pós-Ortognática",
-      desc: "Recuperação funcional após trauma facial, restaurando mobilidade e qualidade de vida.",
+      desc: "Intervenção iniciada no 4º dia de pós-operatório. O acompanhamento fisioterapêutico precoce garantiu uma evolução segura e contínua da amplitude de abertura bucal a cada novo atendimento.",
+      capa: "assets/images/tratamentos/card04/capa.png",
+      galeria: [
+        "assets/images/tratamentos/card04/before.png",
+        "assets/images/tratamentos/card04/during.png",
+        "assets/images/tratamentos/card04/after.png",
+      ],
+    },
+    {
+      // CARD 05
+      id: "05",
+      nome: "Pós-Ortognática",
+      desc: "Reabilitação pós-operatória tardia (iniciada aos 2 meses). Tratamento focado na recuperação da amplitude de abertura bucal, função mastigatória e melhora da dormência no queixo, um resultado fantástico.",
       capa: "assets/images/tratamentos/card05/capa.png",
       galeria: [
         "assets/images/tratamentos/card05/before.png",
         "assets/images/tratamentos/card05/during.png",
         "assets/images/tratamentos/card05/after.png",
+      ],
+    },
+    {
+      // CARD 06
+      id: "06",
+      nome: "Pós-Ortognática",
+      desc: "Foco na reabilitação da função mastigatória. O empenho da paciente no tratamento e o cumprimento rigoroso das orientações clínicas trouxeram resultados progressivos e uma excelente recuperação.",
+      capa: "assets/images/tratamentos/card06/capa.png",
+      galeria: [
+        "assets/images/tratamentos/card06/before.png",
+        "assets/images/tratamentos/card06/during.png",
+        "assets/images/tratamentos/card06/after.png",
       ],
     },
   ],

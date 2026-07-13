@@ -5,10 +5,10 @@
  */
 
 export function initCarousel() {
-  const track    = document.getElementById('carousel-track');
+  const track = document.getElementById('carousel-track');
   const dotsWrap = document.getElementById('carousel-dots');
-  const btnPrev  = document.getElementById('carousel-prev');
-  const btnNext  = document.getElementById('carousel-next');
+  const btnPrev = document.getElementById('carousel-prev');
+  const btnNext = document.getElementById('carousel-next');
 
   if (!track) return;
 
@@ -17,12 +17,12 @@ export function initCarousel() {
   const INTERVAL = 5000;
 
   const getSlides = () => track.querySelectorAll('.carousel__slide');
-  const getDots   = () => dotsWrap?.querySelectorAll('.carousel__dot') || [];
+  const getDots = () => dotsWrap?.querySelectorAll('.carousel__dot') || [];
 
   function goTo(index) {
     const slides = getSlides();
-    const dots   = getDots();
-    const total  = slides.length;
+    const dots = getDots();
+    const total = slides.length;
 
     current = (index + total) % total;
     track.style.transform = `translateX(-${current * 100}%)`;

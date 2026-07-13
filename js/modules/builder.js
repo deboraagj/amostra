@@ -92,7 +92,7 @@ function openLightbox(id) {
   if (!item) return;
 
   const lb = document.getElementById('lightbox');
-  
+
   if (!lb) {
     alert("Ops! O JavaScript funcionou, mas não encontrou o HTML do #lightbox na página. Verifique se você colou a estrutura da galeria no index.html!");
     return;
@@ -233,24 +233,28 @@ function buildTestimonials() {
 function buildContact() {
   const grid = document.getElementById('contact-grid');
   if (!grid) return;
-  
+
   const c = CONTENT.contato;
-  
-  // Link personalizado do Gmail com assunto e corpo da mensagem pré-preenchidos
-  const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=rebecaaragao.fisio@gmail.com&su=Gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia%20bucomaxilofacial&body=Olá,%20Rebeca!%0A%0ATenho%20interesse%20em%20conhecer%20mais%20sobre%20o%20tratamento%20de%20fisioterapia%20bucomaxilofacial.%20Gostaria%20de%20entender%20como%20funciona%20o%20tratamento,%20quais%20são%20as%20indicações%20e%20como%20posso%20agendar%20uma%20avaliação.%0A%0AFico%20no%20aguardo!";
+
+  // Link usando o protocolo universal mailto: para abrir o app nativo
+  const emailLink = "mailto:rebecaaragao.fisio@gmail.com?subject=Gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia%20bucomaxilofacial&body=Olá,%20Rebeca!%0A%0ATenho%20interesse%20em%20conhecer%20mais%20sobre%20o%20tratamento%20de%20fisioterapia%20bucomaxilofacial.%20Gostaria%20de%20entender%20como%20funciona%20o%20tratamento,%20quais%20são%20as%20indicações%20e%20como%20posso%20agendar%20uma%20avaliação.%0A%0AFico%20no%20aguardo!";
 
   const cards = [
     { icon: 'whatsapp', label: 'WhatsApp', value: c.whatsappNum, sub: 'Clique para conversar', href: c.whatsapp },
     { icon: 'phone', label: 'Telefone', value: c.telefone, sub: 'Ligue para nós', href: `tel:${c.telefone.replace(/\D/g, '')}` },
     { icon: 'instagram', label: 'Instagram', value: '@fisio_rebecaaragao', sub: 'Siga nossas novidades', href: c.instagram },
-    { icon: 'email', label: 'E-mail', value: 'rebecaaragao.fisio@gmail.com', sub: 'Envie uma mensagem', href: gmailLink },
+    { icon: 'email', label: 'E-mail', value: 'rebecaaragao.fisio@gmail.com', sub: 'Envie uma mensagem', href: emailLink },
     { icon: 'location', label: 'Localização', value: c.endereco, sub: 'Ver no mapa', href: c.googleMaps },
     { icon: 'google', label: 'Google', value: 'Avalie no Google', sub: 'Sua opinião importa', href: c.google },
   ];
 
-  grid.innerHTML = cards.map((card, i) => `
+  grid.innerHTML = cards.map((card, i) => {
+    // Regra de ouro para mobile: links de email (mailto) e telefone (tel) não devem abrir em nova aba
+    const targetAba = card.href.startsWith('mailto:') || card.href.startsWith('tel:') ? '_self' : '_blank';
+
+    return `
     <a class="contact-card reveal reveal-delay-${(i % 3) + 1}"
-       href="${card.href}" target="_blank" rel="noopener noreferrer"
+       href="${card.href}" target="${targetAba}" rel="noopener noreferrer"
        aria-label="${card.label}: ${card.value}">
       <div class="contact-card__icon">${ICONS[card.icon] || ''}</div>
       <div>
@@ -258,5 +262,6 @@ function buildContact() {
         <p class="contact-card__value">${card.value}</p>
         <p class="contact-card__sub">${card.sub}</p>
       </div>
-    </a>`).join('');
+    </a>`;
+  }).join('');
 }

@@ -580,7 +580,7 @@
   font-family: var(--font-titulo);
   font-size: 1.25rem;
   color: var(--marrom-escuro, #713e21);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .treatment-card__desc {
@@ -589,7 +589,7 @@
   line-height: 1.4;
   /* Limita a descrição a apenas 2 linhas (evita divs muito altas) */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  /* -webkit-line-clamp: 2; */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1005,12 +1005,13 @@
 
 @media (max-width: 768px) {
   .carousel__slide {
+    /* Muda para 1 coluna e empilha um cartão em cima do outro */
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    /* Garante um espaço respiro entre o depoimento de cima e o de baixo */
   }
 
-  .carousel__slide .review-card:last-child {
-    display: none;
-  }
+  /* Removemos a regra display: none que estava escondendo os cards! */
 }
 
 

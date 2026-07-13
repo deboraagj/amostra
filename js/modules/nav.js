@@ -5,9 +5,9 @@
  */
 
 export function initNav() {
-  const nav       = document.querySelector('.nav');
+  const nav = document.querySelector('.nav');
   const hamburger = document.querySelector('.nav__hamburger');
-  const mobileMenu= document.querySelector('.nav__mobile');
+  const mobileMenu = document.querySelector('.nav__mobile');
   const mobileLinks = document.querySelectorAll('.nav__mobile-link');
 
   // Scroll — adiciona classe "scrolled"
