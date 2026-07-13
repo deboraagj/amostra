@@ -47,7 +47,7 @@ function buildTreatments() {
     <div class="treatment-card" data-id="${t.id}" data-nome="${t.nome}" role="button" tabindex="0">
       <div class="treatment-card__img">
         ${t.capa
-      ? `<img src="${t.capa}" alt="${t.nome}" loading="lazy">`
+      ? `<img src="${t.capa}" alt="${t.nome}" loading="lazy" decoding="async">` 
       : `<div class="treatment-card__placeholder">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
                  <rect x="3" y="3" width="18" height="18" rx="3"/>

@@ -495,8 +495,9 @@
    ========================================= */
 .treatment-card {
   flex: 0 0 var(--card-width);
-  /* Alinha os cards pelo início no desktop */
   scroll-snap-align: start;
+  /* NOVO: Força a parada obrigatória de 1 em 1 card, matando o excesso de sensibilidade no mobile */
+  scroll-snap-stop: always; 
   background: var(--branco, #ffffff);
   border-radius: 12px;
   overflow: hidden;
@@ -504,6 +505,8 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
+  /* NOVO: Avisa o navegador que este elemento vai se mover, ativando aceleração de hardware */
+  will-change: transform; 
 }
 
 .treatment-card:hover {
@@ -514,10 +517,11 @@
 .treatment-card__img {
   width: 100%;
   aspect-ratio: 4/5;
-  /* Deixa a imagem mais alta, dando muito mais destaque */
   position: relative;
   overflow: hidden;
   background: var(--bege-claro, #f1daae);
+  /* NOVO: Previne travamentos de renderização (layout thrashing) */
+  transform: translateZ(0); 
 }
 
 .treatment-card__img img {
@@ -525,11 +529,14 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  /* NOVO: Joga a imagem para a placa de vídeo (GPU) resolvendo o peso da rolagem */
+  transform: translateZ(0); 
+  will-change: transform;
 }
 
 .treatment-card:hover .treatment-card__img img {
-  transform: scale(1.03);
-  /* Efeito sutil de zoom */
+  /* NOVO: Mantém o efeito na placa de vídeo durante o zoom */
+  transform: scale(1.03) translateZ(0); 
 }
 
 /* Overlay simplificado */
