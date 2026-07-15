@@ -99,13 +99,9 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;
       background: var(--marrom-medio);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      object-fit: cover;
+      object-position: 20% 40%;
     }
 
     .vcard__photo-placeholder {
@@ -156,14 +152,25 @@
 
     /* Bio */
     .vcard__bio {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
       border-bottom: 1px solid var(--bege-claro);
+    }
+
+    .vcard__bio p {
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
     }
 
     #itens {
       font-size: 1rem;
       color: var(--cinza-texto);
-      line-height: 1.75;
       text-align: center;
     }
 
@@ -296,6 +303,7 @@
       transition: all var(--transition-normal);
       box-shadow: var(--shadow-sm);
       margin-bottom: 20px;
+      gap: 5px;
     }
 
     .vcard__share-btn:hover {
@@ -321,6 +329,13 @@
       color: var(--oliva);
       letter-spacing: .06em;
     }
+
+    .vcard__logo {
+      width: 200px; /* Tamanho delicado para o cartão */
+      height: auto;
+      margin: 0 auto 12px auto;
+      display: block;
+    }
   </style>
 </head>
 
@@ -335,8 +350,7 @@
         <div class="vcard__photo-ring">
           <div class="vcard__photo">
 
-            <img src="assets/images/04.jpeg" alt="Dra. Rebeca Aragão"
-              style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+            <img src="assets/images/01.jpeg" alt="Dra. Rebeca Aragão" class="vcard__photo" />
 
             <div class="vcard__photo-placeholder">
               <circle cx="12" cy="8" r="4" />
@@ -352,13 +366,12 @@
 
       <!-- Bio -->
       <div class="vcard__bio">
-        <p>
-        <div id="itens">DTM</div>
-        <div id="itens">Dor Orofacial</div>
-        <div id="itens">Zumbido</div>
+        <p>Tratamento especializado no manejo das</p>
+        <div id="itens">Disfunções temporomandibulares (DTM)</div>
+        <div id="itens">⁠Dor Orofacial (DOF)</div>
+        <div id="itens">Paralisia Facial (online e presencial)</div>
         <div id="itens">Paralisia Facial</div>
-        <div id="itens">Pós-operatório Bucomaxilofacial</div>
-        </p>
+        <div id="itens">PO de Cirurgias Bucomaxilofaciais (Ortognática, Discopexia, Artroscopia e Traumas de face)</div>
       </div>
 
       <!-- Ações -->
@@ -455,6 +468,7 @@
 
       <!-- Rodapé do card -->
       <div class="vcard__footer">
+        <img src="assets/images/logocomnome.png" alt="Logo Dra. Rebeca Aragão" class="vcard__logo">
         <p>Fisioterapia Bucomaxilofacial · CREFITO 318120-F</p>
       </div>
 
